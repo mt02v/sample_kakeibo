@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2023_12_21_133605) do
 
   create_table "variablecosts", force: :cascade do |t|
     t.string "name", null: false
+    t.date "year_month"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
