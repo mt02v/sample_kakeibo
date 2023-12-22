@@ -17,5 +17,26 @@ class VariablecostValuesController < ApplicationController
   end
   
   def edit
-    @variablecost_value = VariablecostValue.find[:id])
-    
+    @variablecost_value = VariablecostValue.find(params[:id])
+    @variablecost = Variablecost.find(@variablecost_value.variablecost_id)
+  end
+
+ def create
+   @form = Form::VariablecostForm.new(variablecost_form_params)
+   if @form.save
+      redirect_to :variablecost_values, notice: "登録しました"
+   else
+      redirect_to :variablecost_values, notice: "登録に失敗しました"
+   end
+ end
+ 
+ def update
+   @variablecost_value = VariablecostValue.find(params[:id])
+   @variablecost_value.assign_attributes(params[:variablecost_value])
+   if @variablecost_value.save
+     redirect_to :variablecost_values, notice: "情報を更新しました"
+   else
+     render "edit"
+   end
+ end
+end
