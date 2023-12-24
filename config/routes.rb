@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   post "variablecost_values/new(/:name)" => "variablecost_values#new"
 
   get "balance_confirm" => "balance_confirm#top"
-  post "baalance_confirm/show(/:name)" => "balance_confirm#show"
+  post "balance_confirm/show(/:name)" => "balance_confirm#show"
+  post "balance_confirm/show_year(/:name)" => "balance_confirm#show_year"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :incomes
   resources :fixedcosts
