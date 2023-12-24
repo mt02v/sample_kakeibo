@@ -1,0 +1,2 @@
+class BalanceConfirmController < ApplicationController
+end
