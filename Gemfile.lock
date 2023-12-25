@@ -76,6 +76,8 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    chart-js-rails (0.1.7)
+      railties (> 3.1)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.4)
@@ -83,6 +85,10 @@ GEM
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    gon (6.2.1)
+      actionpack (>= 3.0)
+      multi_json
+      request_store (>= 1.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -105,6 +111,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.20.0)
     msgpack (1.7.2)
+    multi_json (1.15.0)
     net-imap (0.4.8)
       date
       net-protocol
@@ -161,6 +168,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.8.3)
+    request_store (1.5.1)
+      rack (>= 1.4)
     rexml (3.2.6)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
@@ -224,6 +233,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  chart-js-rails (~> 0.1.4)
+  gon (~> 6.2.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   puma (~> 5.0)
